@@ -4,15 +4,17 @@ const path = require('path');
 const dicionarioRoutes = require('./src/routes/dicRoutes');
 const { engine } = require('express-handlebars')
 const bodyParser = require('body-parser')
-const BinarySearchTree = require('./src/bst/Bst')
+const BinarySearchTree = require('./src/bst/Bst');
+const { mostrarDicionario } = require('./src/controllers/dicioControllers');
 
 
 
 const app = express();
 app.use(express.json());
-app.use('/api', dicionarioRoutes);
+app.use('/', mostrarDicionario);
 
 //configuração do handlebars
+app.set('views', path.join(__dirname, './', 'views'));
 app.engine('.hbs', engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
 
@@ -34,5 +36,5 @@ app.listen(port, () => {
   module.exports = dicionarioData;
 //rederizando a view
   app.get('/', (req, res) => {
-    res.render('index', null);
+    res.render('index', {dicionarioData});
 });
