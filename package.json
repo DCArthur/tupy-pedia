@@ -1,0 +1,26 @@
+{
+  "name": "tupy-pedia",
+  "version": "1.0.0",
+  "description": "dicionario tupi-guarani - portugues",
+  "main": "app.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imrooteodoro/tupy-pedia.git"
+  },
+  "keywords": [
+    "tupi-guanari"
+  ],
+  "author": "imrooteodoro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imrooteodoro/tupy-pedia/issues"
+  },
+  "homepage": "https://github.com/imrooteodoro/tupy-pedia#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
