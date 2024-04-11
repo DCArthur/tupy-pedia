@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tupypedia - Seu dicionário de Tupi-Guarani</title>
+    <title>Dicionário Tupi-Guarani</title>
 </head>
 <body>
-    <h2>Testando</h2>
+    <h1>Dicionário Tupi-Guarani</h1>
+    {{#each palavras as |palavra|}}
+        <div>
+            <h2>{{palavra.key}}:</h2>
+            <p>{{palavra.value}}</p>
+        </div>
+    {{/each}}
 </body>
 </html>

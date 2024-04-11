@@ -3,6 +3,7 @@ const dicionarioController = require('../controllers/dicioControllers');
 
 const router = express.Router();
 
-router.get('/buscar/:palavra', dicionarioController.buscarPalavra);
+// Adiciona uma rota para renderizar a view do dicionário
+router.get('/', dicionarioController.mostrarDicionario);
 
 module.exports = router;
