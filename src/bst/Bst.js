@@ -88,6 +88,25 @@ class BinarySearchTree {
             result.push({key: node.key, value: node.value});
         }
     }
+
+    startsWith(){
+        let results = [];
+        this._startsWithHelper(this.root, results);
+        return results;
+    }
+    _startsWithHelper(node, results) {
+        if (node !== null) {
+            if (node.key.startsWith('a') || node.key.startsWith('A')) {
+                results.push(node.key);
+            }
+            this._startsWithHelper(node.left, results);
+            this._startsWithHelper(node.right, results);
+        }
+    }
 }
+const bts = new BinarySearchTree();
+
+
+
 
 module.exports = BinarySearchTree;
