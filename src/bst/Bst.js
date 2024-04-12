@@ -1,8 +1,11 @@
 const Node = require('../models/Node');
 
+
 class BinarySearchTree {
     constructor() {
         this.root = null;
+        this.valueSearch = null;
+        this.valueSearch2 = null;
     }
 
     insert(key, value) {
@@ -96,8 +99,8 @@ class BinarySearchTree {
     }
     _startsWithHelper(node, results) {
         if (node !== null) {
-            if (node.key.startsWith('a') || node.key.startsWith('A')) {
-                results.push(node.key);
+            if (node.key.startsWith(this.valueSearch) || node.key.startsWith(this.valueSearch2)) {
+                results.push(node.key) + results.push(node.value);
             }
             this._startsWithHelper(node.left, results);
             this._startsWithHelper(node.right, results);

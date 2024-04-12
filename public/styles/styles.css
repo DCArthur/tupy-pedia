@@ -1,0 +1,12 @@
+/*Criando as variáveis de cores com base na paleta de cores fornecida pelo Savio Vitor*/
+:root {
+    --primary-color: #88b257; 
+    --secondary-color: #4a701c; 
+    --accent-color: #284703;
+    --green-to-gray-color: #434d36;
+    --gray-color: #555d4c;
+  }
+  *{
+    color: white;
+    background-color: var(--accent-color);
+  }

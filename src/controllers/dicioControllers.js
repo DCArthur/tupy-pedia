@@ -1,19 +1,39 @@
 const BinarySearchTree = require('../bst/Bst');
 const bst = new BinarySearchTree();
+const dicionarioData  = require('../../data/dicionario.json');
 
+//Mostrar dicionario em ordem
 const mostrarDicionario = (req, res) => {
     const palavrasEmOrdem = bst.inOrder(); 
-    res.render('index', { palavras: palavrasEmOrdem });
+    lerDicionario()
+    res.render('index', { palavras: palavrasEmOrdem});
 };
+//Mostrar dicionario Pre-ordem
+const dicionarioPreOrdem = (req, res) => {
+    const palavrasPreOrdem = bst.preOrder();
+    lerDicionario()
+    res.render('index', {palavras : palavrasPreOrdem});
+}
+//Mostra dicionario Pos-ordem
+const dicionarioPosOrdem = (req, res) => {
+    const palavrasPreOrdem = bst.preOrder();
+    lerDicionario()
+    res.render('index', {palavras : palavrasPreOrdem});
+}
+
 const lerDicionario = () =>{
-    const dicionarioData  = require('../../data/dicionario.json');
     Object.entries(dicionarioData).forEach(([key, value]) => {
         bst.insert(key, value);
     })
 }
 
-lerDicionario()
+
+
 
 module.exports = {
-    mostrarDicionario 
+    mostrarDicionario,
+    dicionarioPreOrdem,
+    lerDicionario,
+    dicionarioPosOrdem
+    
 };
