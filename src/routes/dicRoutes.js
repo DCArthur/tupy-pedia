@@ -9,6 +9,7 @@ router.get('InOrder', dicionarioController.mostrarDicionario)
 router.get('PreOrder', dicionarioController.dicionarioPreOrdem)
 router.get('PosOrdem', dicionarioController.dicionarioPosOrdem)
 router.get('buscaLetra', dicionarioController.buscarPorLetra)
+router.get('buscaPalavra', dicionarioController.buscarNoDic)
 
 
 module.exports = router;
