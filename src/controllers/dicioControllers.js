@@ -34,9 +34,10 @@ const dicionarioPosOrdem = (req, res) => {
 
 //Buscar pela letra inicial
 const buscarPorLetra = (req, res) =>{
+    bst.value1 = req.query.busca
     lerDicionario()
-    const buscarPorLetrav = bst.startsWith('a', 'A')
-    res.render('home', {palavras: buscarPorLetra})
+    const buscarPorLetrav = bst.startsWith()
+    res.render('index', {palavras: buscarPorLetrav})
 }
 
 //Buscando valor na arvore 
@@ -52,8 +53,6 @@ const buscarNoDic = (req, res) => {
     }
     
 }
-
-
 
 
 
