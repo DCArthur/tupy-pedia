@@ -1,8 +1,6 @@
 const BinarySearchTree = require('../bst/Bst');
-const bst = new BinarySearchTree('a', 'A');
 const dicionarioData  = require('../../data/dicionario.json');
-
-
+const bst = new BinarySearchTree();
 const lerDicionario = () =>{
     Object.entries(dicionarioData).forEach(([key, value]) => {
         bst.insert(key, value);
@@ -14,7 +12,7 @@ const mostrarDicionario = (req, res) => {
     lerDicionario()
     const palavrasEmOrdem = bst.inOrder(); 
     res.render('index', { palavras: palavrasEmOrdem});
-    return {palavras: palavrasEmOrdem}
+  
 
 };
 
@@ -31,16 +29,23 @@ const dicionarioPosOrdem = (req, res) => {
     lerDicionario()
     const palavrasPosOrdem = bst.postOrder();
     res.render('index', {palavras : palavrasPosOrdem});
-    return {palavras: palavrasPosOrdem}
+
 }
 
 //Buscar pela letra inicial
 
 const buscarPorLetra = (req, res) =>{
-    //lerDicionario()
-    const buscarPorLetrav = bst.startsWith()
-    //res.render({palavras:buscarPorLetrav })
-    return {palavras:buscarPorLetrav}
+    lerDicionario()
+    const buscarPorLetrav = bst.startsWith('a', 'A')
+    res.render('home', {palavras: buscarPorLetra})
+}
+
+//Buscando valor na arvore 
+const buscarNoDic = (req, res) => {
+    lerDicionario()
+    const buscar = bst.search('Abaré')
+    res.render('busca', {palavras:buscar})
+    return {palavras: buscar}
 }
 
 
@@ -55,6 +60,7 @@ module.exports = {
     dicionarioPreOrdem,
     lerDicionario,
     dicionarioPosOrdem,
-    buscarPorLetra
+    buscarPorLetra, 
+    buscarNoDic
     
 };
