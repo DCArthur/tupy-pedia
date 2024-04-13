@@ -33,7 +33,6 @@ const dicionarioPosOrdem = (req, res) => {
 }
 
 //Buscar pela letra inicial
-
 const buscarPorLetra = (req, res) =>{
     lerDicionario()
     const buscarPorLetrav = bst.startsWith('a', 'A')
@@ -42,10 +41,16 @@ const buscarPorLetra = (req, res) =>{
 
 //Buscando valor na arvore 
 const buscarNoDic = (req, res) => {
+    const palavra = req.query.buscaPalavra;
     lerDicionario()
-    const buscar = bst.search('Abaré')
-    res.render('busca', {palavras:buscar})
-    return {palavras: buscar}
+    const buscar = bst.search(palavra)
+    if(buscar){
+        res.render('busca', {palavras:buscar, notFound:false, found:true})
+    }
+    else{
+        res.render('busca', {message: 'Palavra não encontrada!', notFound:true, found:false})
+    }
+    
 }
 
 
