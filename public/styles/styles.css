@@ -7,6 +7,86 @@
     --gray-color: #555d4c;
   }
   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     color: white;
-    background-color: var(--accent-color);
+    text-decoration: none;
   }
+  body{
+    background-color: var(--accent-color);
+
+  }
+
+  .banner{
+    display: flex;
+    width: 100%;
+    height:300px;
+    background-image: url('../img/banner.webp');
+    background-size: cover;background-position: 0%;
+
+}
+.navbar{
+    position: fixed;
+    z-index:1000;
+    background-color:var(--secondary-color);
+    width:100%;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 40px;
+    margin: auto;
+}
+.logo{
+     color:var(--primary-color);
+     font-size: 30px;
+     font-weight: bolder;
+}
+.links{
+    width:40%;
+    margin: auto;
+    margin-left:30em;
+}
+
+a{
+    background-color: transparent;
+}
+
+.container{
+    margin: auto;
+    width: 80%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.porLetra{
+    margin: auto;
+    margin-top:0.5em;
+}
+
+.porLetra a{
+    margin-left: 1em;
+}
+
+.search{
+    width:70%;
+    margin: auto;
+    display: flex;
+}
+
+.search input{
+    border-radius:4px;
+    text-align: left;
+    color: #284703;
+    width: 70%;
+    padding:1em;
+    margin: auto;
+}

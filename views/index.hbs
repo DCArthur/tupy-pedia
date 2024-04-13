@@ -3,19 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Dicionário Tupi-Guarani</title>
-    
-
 </head>
+<nav class="navbar">
+
+    <div class="nav-container">
+          <span class="logo">TUPYPÉDIA</span>
+         <div class="links">
+             <a href="./inOrder">Em ordem</a>
+             <a href="./posOrdem">Pós-ordem</a>
+             <a href="./preOrder">Pré-ordem</a>
+         </div>
+    </div>
+</nav>
 <body>
-    <a href="./inOrder" class="mr-auto">Em ordem</a>
-    <a href="./posOrdem">Pós-ordem</a>
-    <a href="./preOrder">Pré-ordem</a>
-
-   <dir> 
-     <h1>Dicionário Tupi-Guarani</h1>
-
-
-   </dir>
+    
+   <div class="banner">
+      <div class="search">
+        <input type="text" placeholder="Pesquise uma palavra">
+      </div>
+   </div>
+   <div class="container">
+   <div class="porLetra"> 
+        <a href="#">A</a>
+        <a href="#">B</a>
+        <a href="#">C</a>
+        <a href="#">D</a>
+        <a href="#">E</a>
+        <a href="#">I</a>
+        <a href="#">J</a>
+        <a href="#">K</a>
+        <a href="#">M</a>
+        <a href="#">N</a>
+        <a href="#">O</a>
+        <a href="#">P</a>
+        <a href="#">Q</a>
+        <a href="#">R</a>
+        <a href="#">S</a>
+        <a href="#">T</a>
+        <a href="#">U</a>
+        <a href="#">V</a>
+        <a href="#">X</a>
+        <a href="#">Y</a>
+        
+        
+        
+        
+   </div>
     
     
     {{#each palavras as |palavra|}}
@@ -24,5 +57,6 @@
             <p>{{palavra.value}}</p>
         </div>
     {{/each}}
+    </div>
 </body>
 </html>
