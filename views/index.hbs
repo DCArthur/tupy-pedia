@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Tupypédia - Dicionário Tupi-Guarani</title>
+    <title>Dicionário Tupi-Guarani</title>
 </head>
-<body>
-    <nav class="navbar">
-     <div class="nav-container">
+<nav class="navbar">
+
+    <div class="nav-container">
           <span class="logo">TUPYPÉDIA</span>
          <div class="links">
              <a href="./inOrder">Em ordem</a>
@@ -14,10 +14,15 @@
              <a href="./preOrder">Pré-ordem</a>
          </div>
     </div>
-   </nav>
+</nav>
+<body>
+    
    <div class="banner">
       <div class="search">
-        <input type="text" placeholder="Pesquise uma palavra">
+        <form action="/buscaPalavra" method="get">
+        <input type="text" placeholder="Pesquise uma palavra" name="buscaPalavra">
+        <button type="submit" class="btn-nav">Pesquisar</button>
+        </form>
       </div>
    </div>
    <div class="container">
@@ -43,7 +48,6 @@
         <a href="#">X</a>
         <a href="#">Y</a>
    </div>
-   <!--Render da rota buscar por palavra-->
     {{#each palavras as |palavra|}}
         <div>
             <h2>{{palavra.key}}:</h2>
