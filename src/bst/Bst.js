@@ -46,7 +46,7 @@ class BinarySearchTree {
         } else if (key > node.key) {
             return this._searchNode(node.right, key);
         } else {
-            return node.value; // Encontrado
+            return key + ' : ' + node.value; // Encontrado
         }
     }
 
@@ -92,20 +92,22 @@ class BinarySearchTree {
         }
     }
 
-    startsWith(){
+    startsWith(v1, v2) {
         let result = [];
         this._startsWithHelper(this.root, result);
         return result;
     }
+    
     _startsWithHelper(node, result) {
         if (node !== null) {
-            if (node.key.startsWith(this.valueSearch) || node.key.startsWith(this.valueSearch2)) {
-                result.push(node.key) + result.push(node.value);
+            if (node.key.startsWith(this.v1) || node.key.startsWith(this.v2)) {
+                result.push({ key: node.key, value: node.value });
             }
             this._startsWithHelper(node.left, result);
             this._startsWithHelper(node.right, result);
         }
     }
+    
 }
 const bts = new BinarySearchTree();
 
