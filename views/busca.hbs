@@ -18,7 +18,10 @@
    </nav>
    <div class="banner">
       <div class="search">
-        <input type="text" placeholder="Pesquise uma palavra">
+        <form action="/buscaPalavra" method="get">
+        <input type="text" placeholder="Pesquise uma palavra" name="buscaPalavra">
+        <button type="submit" class="btn-nav">Pesquisar</button>
+        </form>
       </div>
    </div>
    <div class="container">
@@ -45,7 +48,19 @@
         <a href="#">Y</a>
    </div>
    <!--Render da rota buscar por palavra-->
+   {{#if found}}
     <div class="significado">{{palavras}}</div>
+    {{/if}}
+    {{#if notFound}}
+    <div class="not-found">
+        <div class="img-found"><img src="/img/what.png" alt="" width="400" height="400"></div>
+        <div class="interr"><span>?</span></div>
+        <div class="message-found">
+            {{message}}
+        </div>
+        </div>
+    {{/if}}
+
 </div>
 </body>
 </html>
