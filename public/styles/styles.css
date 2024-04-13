@@ -86,9 +86,21 @@ a{
     border-radius:4px;
     text-align: left;
     color: #284703;
-    width: 70%;
-    padding:1em;
+    width:100%;
+    padding:10px;
     margin: auto;
+}
+.btn-nav{
+    padding:5px;
+    color: wheat;
+    border: none;
+    background-color: var(--accent-color);
+
+}
+.search form{
+    display: flex;
+    margin: auto;
+    width: 100%;
 }
 
 .significado{
@@ -99,5 +111,24 @@ a{
     overflow: hidden;
     margin: auto;
     margin-top:4em;
+}
 
+.not-found{
+    margin: auto;
+    display:flex;
+    flex-direction:row;
+    font-size: 20px;
+    width: 60%;
+    height:40%;
+}
+
+.message-found{
+    font-weight: bolder;
+    margin-left: -20%;
+    margin-top:30%;
+}
+.interr span{
+    font-size:180px;
+    color: var(--secondary-color);
+    text-shadow: var(--gray-color) 2px 1px 4px;
 }
