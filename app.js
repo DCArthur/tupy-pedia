@@ -5,7 +5,7 @@ const dicionarioRoutes = require('./src/routes/dicRoutes');
 const { engine } = require('express-handlebars')
 const bodyParser = require('body-parser')
 const BinarySearchTree = require('./src/bst/Bst');
-const { MostrarPorLetra, dicionarioPosOrdem, dicionarioPreOrdem, mostrarDicionario} = require('./src/controllers/dicioControllers');
+const { MostrarPorLetra, dicionarioPosOrdem, dicionarioPreOrdem, mostrarDicionario, buscarPorLetra} = require('./src/controllers/dicioControllers');
 
 const app = express();
 app.use(express.json());
@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, './public')))
 app.use('/inOrder', mostrarDicionario)
 app.use('/PreOrder', dicionarioPreOrdem)
 app.use('/PosOrdem', dicionarioPosOrdem)
+app.use('/buscaLetra', buscarPorLetra)
 
 
 //configuração do handlebars
@@ -33,13 +34,11 @@ app.listen(port, () => {
 
   
  
-//rederizando a view
+//rederizando a da home
   app.get('/', (req, res) => {
-    res.render('index', {dicionarioData});
+    res.render('home', null);
 
 
 });
 
-app.get('/inOrder', (req, res) => {
-  res.render('emordem')
-})
+
