@@ -62,7 +62,7 @@ a{
 .container{
     margin: auto;
     width: 80%;
-    height:100vh;
+    height:auto;
     display: flex;
     flex-direction: column;
 }
@@ -89,4 +89,15 @@ a{
     width: 70%;
     padding:1em;
     margin: auto;
+}
+
+.significado{
+    padding: 5px;
+    background-color: var(--green-to-gray-color);
+    display:flex;
+    height:auto;
+    overflow: hidden;
+    margin: auto;
+    margin-top:4em;
+
 }
