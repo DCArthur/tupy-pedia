@@ -3,15 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <title>Tupypédia - Remover Palavra</title>
+<link rel="stylesheet" href="/styles/removeform.css">
 </head>
 <body>
-  <h1>Remoção de palavras</h1>
-  <form id="removerForm">
+      <nav class="navbar">
+     <div class="nav-container">
+          <span class="logo">TUPYPÉDIA</span>
+         <div class="links">
+             <a href="./inOrder">Em ordem</a>
+             <a href="./posOrdem">Pós-ordem</a>
+             <a href="./preOrder">Pré-ordem</a>
+             <a href="adiciona">Adicionar palavras</a>
+             <a href="remove">Remover palavras</a>
+         </div>
+    </div>
+   </nav>
+   <div class="banner">
+      <div class="search">
+        <form action="/buscaPalavra" method="get">
+        <input type="text" placeholder="Pesquise uma palavra" name="buscaPalavra">
+        <button type="submit" class="btn-nav">Pesquisar</button>
+        </form>
+      </div>
+   </div>
+  <div class="container">
+    <form id="removerForm">
     <label for="palavra">Palavra:</label>
     <input type="text" id="palavra" name="palavra" required>
     <button type="submit">Remover</button>
   </form>
-
+  </div>
   <script>
     document.getElementById('removerForm').onsubmit = function(e) {
       e.preventDefault();
