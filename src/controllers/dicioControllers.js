@@ -1,6 +1,6 @@
 const BinarySearchTree = require('../bst/Bst');
-const dicionarioData  = require('../../data/dicionario.json');
 const bst = new BinarySearchTree();
+const dicionarioData = require('../../data/dicionario.json')
 const lerDicionario = () =>{
     Object.entries(dicionarioData).forEach(([key, value]) => {
         bst.insert(key, value);
@@ -39,24 +39,38 @@ const buscarPorLetra = (req, res) =>{
     const buscarPorLetrav = bst.startsWith()
     res.render('index', {palavras: buscarPorLetrav})
 }
+//Remover valor
+const removerDoDicionario = (palavra) => {
+    delete dicionarioData[palavra];
+    bst.remove(palavra);
+  };
 
 //Buscando valor na arvore 
 const buscarNoDic = (req, res) => {
-    const palavra = req.query.buscaPalavra;
-    lerDicionario()
-    const buscar = bst.search(palavra)
-    if(buscar){
-        res.render('busca', {palavras:buscar, notFound:false, found:true})
-    }
-    else{
-        res.render('busca', {message: 'Palavra não encontrada!', notFound:true, found:false})
-    }
-    
-}
+  const palavra = req.query.buscaPalavra;
+  lerDicionario();
+  const buscar = bst.search(palavra);
+  if (buscar) {
+    res.render("busca", { palavras: buscar, notFound: false, found: true });
+  } else {
+    res.render("busca", {
+      message: "Palavra não encontrada!",
+      notFound: true,
+      found: false,
+    });
+  }
+};
+//add no dicionario
+const adicionarAoDicionario = (palavra, valor) => {
+    dicionarioData[palavra] = valor;
+    bst.add(palavra);
+};
 
 
 
-
+//lerDicionario()
+//bst.remove('Macaúba')
+//console.log(bst.search('Macaúba'))
 
 
 module.exports = {
@@ -65,6 +79,8 @@ module.exports = {
     lerDicionario,
     dicionarioPosOrdem,
     buscarPorLetra, 
-    buscarNoDic
+    buscarNoDic,
+    removerDoDicionario,
+    adicionarAoDicionario
     
 };
