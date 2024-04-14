@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tupypédia - Adicionar palavras</title>
+    <script src="/javascript/addDicAux.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="adicionarForm">
+        <label for="palavra">Palavra:</label>
+        <input type="text" id="palavra" name="palavra" required />
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" name="valor" required />
+        <button type="submit">Adicionar</button>
+      </form>
+    </div>
+    <script>
+      document.getElementById("adicionarForm").onsubmit = function (e) {
+      e.preventDefault(); const palavra =
+      document.getElementById("palavra").value; const valor =
+      document.getElementById("valor").value; fetch("/adicionar", { method:
+      "POST", headers: { "Content-Type": "application/json", }, body:
+      JSON.stringify({ palavra, valor }), }) .then((response) =>
+      response.text()) .then((data) => { alert(data); }) .catch((error) => {
+      console.error("Erro:", error); }); };
+    </script>
+  </body>
+</html>
