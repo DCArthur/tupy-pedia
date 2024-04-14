@@ -1,11 +1,12 @@
 const express = require('express');
+const dicionarioData  = require('./data/dicionario.json');
 const fs = require('fs');
 const path = require('path');
 const dicionarioRoutes = require('./src/routes/dicRoutes');
 const { engine } = require('express-handlebars')
 const bodyParser = require('body-parser')
 const BinarySearchTree = require('./src/bst/Bst');
-const { MostrarPorLetra, dicionarioPosOrdem, dicionarioPreOrdem, mostrarDicionario, buscarPorLetra, buscarNoDic} = require('./src/controllers/dicioControllers');
+const { MostrarPorLetra, dicionarioPosOrdem, dicionarioPreOrdem, mostrarDicionario, buscarPorLetra, buscarNoDic, removerPalavra, removerDoDicionario} = require('./src/controllers/dicioControllers');
 
 const app = express();
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use('/PreOrder', dicionarioPreOrdem)
 app.use('/PosOrdem', dicionarioPosOrdem)
 app.use('/buscaLetra', buscarPorLetra)
 app.use('/buscaPalavra', buscarNoDic)
+//app.use('/remover', removerDoDicionario)
 
 //configuração do handlebars
 app.set('views', path.join(__dirname, './', 'views'));
@@ -32,13 +34,28 @@ app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
 
-  
+
  
 //rederizando a da home
   app.get('/', (req, res) => {
     res.render('home', null);
 
-
 });
+//removendo do dicionario 
+app.delete('/remover', (req, res) => {
+  let palavra = req.query.palavra;
+  removerDoDicionario(palavra);
+  bst.remove(palavra)
+  res.send(`${palavra} removida com sucesso do dicionário!`);
+});
+//adicionando no dicionario 
+app.post("/adicionar", (req, res) => {
+  let palavra = req.body.palavra;
+  let valor = req.body.valor;
+  dicionarioData[palavra] = valor;
+  bst.insert(palavra);
+  res.send(`Palavra ${palavra} adicionada com sucesso ao dicionário.`);
+});
+
 
 
