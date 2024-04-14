@@ -6,7 +6,7 @@ const dicionarioRoutes = require('./src/routes/dicRoutes');
 const { engine } = require('express-handlebars')
 const bodyParser = require('body-parser')
 const BinarySearchTree = require('./src/bst/Bst');
-const { MostrarPorLetra, dicionarioPosOrdem, dicionarioPreOrdem, mostrarDicionario, buscarPorLetra, buscarNoDic, removerPalavra, removerDoDicionario} = require('./src/controllers/dicioControllers');
+const { MostrarPorLetra, dicionarioPosOrdem, dicionarioPreOrdem, mostrarDicionario, buscarPorLetra, buscarNoDic, removerPalavra, removerDoDicionario, adicionarAoDicionario} = require('./src/controllers/dicioControllers');
 
 const app = express();
 app.use(express.json());
@@ -24,6 +24,7 @@ app.use('/buscaPalavra', buscarNoDic)
 app.set('views', path.join(__dirname, './', 'views'));
 app.engine('.hbs', engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
+express.urlencoded({ extended: true })
 
 // Carrega o dicionário e insere na BST
 const bst = new BinarySearchTree();
@@ -40,7 +41,11 @@ app.listen(port, () => {
   app.get('/', (req, res) => {
     res.render('home', null);
 
-});
+ });
+ //Renderizando a view adicionar
+ app.get('/adiciona', (req, res) =>{
+  res.render('adiciona', null)
+ });
 //removendo do dicionario 
 app.delete('/remover', (req, res) => {
   let palavra = req.query.palavra;
@@ -50,6 +55,7 @@ app.delete('/remover', (req, res) => {
 });
 //adicionando no dicionario 
 app.post("/adicionar", (req, res) => {
+  console.log(req.body)
   let palavra = req.body.palavra;
   let valor = req.body.valor;
   dicionarioData[palavra] = valor;
