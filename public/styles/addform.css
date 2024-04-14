@@ -1,0 +1,38 @@
+@import url('styles.css');
+
+body{
+    background-color: var(--accent-color);
+}
+
+.container{
+    background-image: url('../img/happy.png');
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+}
+#adicionarForm{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    height:50%;
+    margin: auto;
+}
+#adicionarForm label{
+    font-size: 30px;
+    color: white;
+    text-shadow: rgb(13, 11, 6) 2px 4px 3px;
+    font-weight: bolder;
+}
+#adicionarForm input{
+    padding: 8px;
+    color: var(--accent-color);
+}
+
+#adicionarForm button{
+    background-color:rgb(2, 24, 2);
+    border: none;
+    color: wheat;
+    padding: 9px;
+    font-size: 15px;
+    margin-top:0.5em;
+}
