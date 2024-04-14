@@ -2,7 +2,6 @@ const express = require('express');
 const dicionarioController = require('../controllers/dicioControllers');
 
 const router = express.Router();
-
 router.get('/', dicionarioController.mostrarDicionario)
 router.get('InOrder', dicionarioController.mostrarDicionario)
 router.get('PreOrder', dicionarioController.dicionarioPreOrdem)
