@@ -46,8 +46,14 @@ app.listen(port, () => {
  app.get('/adiciona', (req, res) =>{
   res.render('adiciona', null)
  });
+
+ //renderizando view remove
+ app.get('/remove', (req, res)=>{
+  res.render('remove', null)
+ })
 //removendo do dicionario 
 app.delete('/remover', (req, res) => {
+  console.log(req.body)
   let palavra = req.query.palavra;
   removerDoDicionario(palavra);
   bst.remove(palavra)
