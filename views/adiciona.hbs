@@ -1,15 +1,36 @@
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tupypédia - Adicionar</title>
+    <link rel="stylesheet" href="/styles/addform.css">
   </head>
   <body>
+        <nav class="navbar">
+     <div class="nav-container">
+          <span class="logo">TUPYPÉDIA</span>
+         <div class="links">
+             <a href="./inOrder">Em ordem</a>
+             <a href="./posOrdem">Pós-ordem</a>
+             <a href="./preOrder">Pré-ordem</a>
+             <a href="adiciona">Adicionar palavras</a>
+             <a href="remove">Remover palavras</a>
+         </div>
+    </div>
+   </nav>
+   <div class="banner">
+      <div class="search">
+        <form action="/buscaPalavra" method="get">
+        <input type="text" placeholder="Pesquise uma palavra" name="buscaPalavra">
+        <button type="submit" class="btn-nav">Pesquisar</button>
+        </form>
+      </div>
+   </div>
     <div class="container">
       <form id="adicionarForm">
         <label for="palavra">Palavra:</label>
         <input type="text" id="palavra" name="palavra" required />
-        <label for="valor">Valor:</label>
+        <label for="valor">Significado:</label>
         <input type="text" id="valor" name="valor" required />
         <button type="submit">Adicionar</button>
       </form>
