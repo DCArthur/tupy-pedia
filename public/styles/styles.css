@@ -57,6 +57,11 @@ body {
 a {
   background-color: transparent;
 }
+a:hover{
+  transition:400ms;
+  border-top:2px solid var(--primary-color);
+  border-bottom: solid var(--primary-color);
+}
 
 .container {
   margin: auto;
@@ -94,6 +99,11 @@ a {
   color: wheat;
   border: none;
   background-color: var(--accent-color);
+}
+.btn-nav:hover{
+  background-color:var(--secondary-color);
+  border: solid 1px var(--accent-color);
+  color: wheat;
 }
 .search form {
   display: flex;
