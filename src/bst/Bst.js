@@ -17,23 +17,22 @@ class BinarySearchTree {
   }
 
   _insertNode(node, newNode) {
-    if (newNode.key < node.key) {
+    if (newNode.key.localeCompare(node.key) < 0) {
         if (node.left === null) {
             node.left = newNode;
         } else {
             this._insertNode(node.left, newNode);
         }
-        } else if (newNode.key > node.key) {
-            if (node.right === null) {
-                node.right = newNode;
-            } else {
-                this._insertNode(node.right, newNode);
-            }
+    } else if (newNode.key.localeCompare(node.key) > 0) {
+        if (node.right === null) {
+            node.right = newNode;
         } else {
-            // Chave já existe, atualizar o valor
-            node.value = newNode.value;
+            this._insertNode(node.right, newNode);
         }
+    } else {
+        node.value = newNode.value;  // Atualiza o valor se a chave já existe
     }
+}
   //remover Nó
   remove(key) {
     this.root = this._removeNode(this.root, key);
