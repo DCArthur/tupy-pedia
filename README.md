@@ -1,7 +1,8 @@
 # TUPYPÉDIA
 Repositório dedicado ao trabalho de Estrutura de Dados II
+## ÍNDICE
 
-## ESTRUTURA DE PASTAS
+### ESTRUTURA DE PASTAS
 
 - tupy-pedia/
   - public/
@@ -14,6 +15,9 @@ Repositório dedicado ao trabalho de Estrutura de Dados II
       - addform.css
       - removeform.css
       - styles.css
+    - javascript/
+      - addAux.js
+      - removeAux.js  
   - src/
     - bst/
       - bst.js
