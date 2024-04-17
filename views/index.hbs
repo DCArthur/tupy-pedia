@@ -1,35 +1,41 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/styles/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/styles/styles.css" />
     <title>Tupypédia - Dicionário</title>
-</head>
-<nav class="navbar">
+  </head>
+  <nav class="navbar">
 
     <div class="nav-container">
-          <span class="logo">TUPYPÉDIA</span>
-         <div class="links">
-             <a href="./inOrder">Em ordem</a>
-             <a href="./posOrdem">Pós-ordem</a>
-             <a href="./preOrder">Pré-ordem</a>
-             <a href="adiciona">Adicionar palavras</a>
-             <a href="remove">Remover palavras</a>
-         </div>
+
+      <div class="logo-img">
+        <img src="/img/tupylogo.png" alt="" width="90" height="90" />
+      </div>
+      <span class="logo">
+        TUPYPÉDIA</span>
+      <div class="links">
+        <a href="./inOrder">Em ordem</a>
+        <a href="./posOrdem">Pós-ordem</a>
+        <a href="./preOrder">Pré-ordem</a>
+        <a href="adiciona">Adicionar palavras</a>
+        <a href="remove">Remover palavras</a>
+      </div>
     </div>
-</nav>
-<body>
-    
-   <div class="banner">
+  </nav>
+    <div class="banner">
       <div class="search">
         <form action="/buscaPalavra" method="get">
-        <input type="text" placeholder="Pesquise uma palavra" name="buscaPalavra">
-        <button type="submit" class="btn-nav">Pesquisar</button>
+          <input
+            type="text"
+            placeholder="Pesquise uma palavra"
+            name="buscaPalavra"
+          />
+          <button type="submit" class="btn-nav">Pesquisar</button>
         </form>
       </div>
-   </div>
-   <div class="container">
-   <div class="porLetra"> 
+    </div>
+    <div class="container">
+      <div class="porLetra">
         <a href="buscaLetra?busca=A">A</a>
         <a href="buscaLetra?busca=B">B</a>
         <a href="buscaLetra?busca=C">C</a>
@@ -50,13 +56,13 @@
         <a href="buscaLetra?busca=V">V</a>
         <a href="buscaLetra?busca=X">X</a>
         <a href="buscaLetra?busca=Y">Y</a>
-   </div>
-    {{#each palavras as |palavra|}}
+      </div>
+      {{#each palavras as |palavra|}}
         <div>
-            <h2>{{palavra.key}}:</h2>
-            <p>{{palavra.value}}</p>
+          <h2>{{palavra.key}}:</h2>
+          <p>{{palavra.value}}</p>
         </div>
-    {{/each}}
+      {{/each}}
     </div>
-</body>
+  </body>
 </html>

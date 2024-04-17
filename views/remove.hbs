@@ -1,38 +1,47 @@
-<!DOCTYPE html>
 <html lang="pt">
-<head>
-<meta charset="UTF-8">
-<title>Tupypédia - Remover Palavra</title>
-<link rel="stylesheet" href="/styles/removeform.css">
-</head>
-<body>
-      <nav class="navbar">
-     <div class="nav-container">
-          <span class="logo">TUPYPÉDIA</span>
-         <div class="links">
-             <a href="./inOrder">Em ordem</a>
-             <a href="./posOrdem">Pós-ordem</a>
-             <a href="./preOrder">Pré-ordem</a>
-             <a href="adiciona">Adicionar palavras</a>
-             <a href="remove">Remover palavras</a>
-         </div>
-    </div>
-   </nav>
-   <div class="banner">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tupypédia - Remover Palavra</title>
+    <link rel="stylesheet" href="/styles/removeform.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+
+      <div class="nav-container">
+
+        <div class="logo-img">
+          <img src="/img/tupylogo.png" alt="" width="90" height="90" />
+        </div>
+        <span class="logo">
+          TUPYPÉDIA</span>
+        <div class="links">
+          <a href="./inOrder">Em ordem</a>
+          <a href="./posOrdem">Pós-ordem</a>
+          <a href="./preOrder">Pré-ordem</a>
+          <a href="adiciona">Adicionar palavras</a>
+          <a href="remove">Remover palavras</a>
+        </div>
+      </div>
+    </nav>
+    <div class="banner">
       <div class="search">
         <form action="/buscaPalavra" method="get">
-        <input type="text" placeholder="Pesquise uma palavra" name="buscaPalavra">
-        <button type="submit" class="btn-nav">Pesquisar</button>
+          <input
+            type="text"
+            placeholder="Pesquise uma palavra"
+            name="buscaPalavra"
+          />
+          <button type="submit" class="btn-nav">Pesquisar</button>
         </form>
       </div>
-   </div>
-  <div class="container">
-    <form id="removerForm">
-    <label for="palavra">Palavra:</label>
-    <input type="text" id="palavra" name="palavra" required>
-    <button type="submit">Remover</button>
-  </form>
-  </div>
-  <script src="javascript/removeAux.js"></script>
-</body>
+    </div>
+    <div class="container">
+      <form id="removerForm">
+        <label for="palavra">Palavra:</label>
+        <input type="text" id="palavra" name="palavra" required />
+        <button type="submit">Remover</button>
+      </form>
+    </div>
+    <script src="javascript/removeAux.js"></script>
+  </body>
 </html>
