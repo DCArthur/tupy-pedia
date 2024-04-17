@@ -1,4 +1,8 @@
 /*Criando as variáveis de cores com base na paleta de cores fornecida pelo Savio Vitor*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Waiting+for+the+Sunrise&display=swap');
+
+
 :root {
   --primary-color: #88b257;
   --secondary-color: #4a701c;
@@ -7,6 +11,10 @@
   --gray-color: #555d4c;
 }
 * {
+  font-family: "Waiting for the Sunrise", cursive;
+  font-weight: 400;
+  font-style:normal;
+  font-weight: bolder;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
