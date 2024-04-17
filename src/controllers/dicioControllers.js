@@ -67,12 +67,6 @@ const adicionarAoDicionario = (palavra, valor) => {
 };
 
 
-
-//lerDicionario()
-//bst.remove('Macaúba')
-//console.log(bst.search('Macaúba'))
-
-
 module.exports = {
     mostrarDicionario,
     dicionarioPreOrdem,
