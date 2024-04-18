@@ -17,8 +17,8 @@
         <a href="./inOrder">Em ordem</a>
         <a href="./posOrdem">Pós-ordem</a>
         <a href="./preOrder">Pré-ordem</a>
-        <a href="adiciona">Adicionar palavras</a>
-        <a href="remove">Remover palavras</a>
+        <a href="adiciona">Adicionar</a>
+        <a href="remove">Remover</a>
       </div>
     </div>
   </nav>
@@ -59,8 +59,8 @@
       </div>
       {{#each palavras as |palavra|}}
         <div>
-          <h2>{{palavra.key}}:</h2>
-          <p>{{palavra.value}}</p>
+          <h2 class="palavra">{{palavra.key}}:</h2>
+          <p class="valor">{{palavra.value}}</p>
         </div>
       {{/each}}
     </div>
