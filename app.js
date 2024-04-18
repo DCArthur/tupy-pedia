@@ -32,7 +32,7 @@ const bst = new BinarySearchTree();
 
 const port = 3000;
 app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+    console.log(`Tupypédia rodando em http://localhost:${port}`);
 });
 
 
