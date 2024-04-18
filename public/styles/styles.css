@@ -62,6 +62,7 @@ body {
 }
 
 a {
+  margin: 1em;
   background-color: transparent;
 }
 a:hover{
@@ -146,4 +147,8 @@ a:hover{
   font-size: 180px;
   color: var(--secondary-color);
   text-shadow: var(--gray-color) 2px 1px 4px;
+}
+
+.palavra{
+  background-color: var(--secondary-color);
 }
