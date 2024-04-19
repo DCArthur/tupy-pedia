@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="porLetra">
+      <div class="porLetra" style="margin-bottom:0.2em;">
         <a href="buscaLetra?busca=A">A</a>
         <a href="buscaLetra?busca=B">B</a>
         <a href="buscaLetra?busca=C">C</a>
@@ -57,12 +57,15 @@
         <a href="buscaLetra?busca=X">X</a>
         <a href="buscaLetra?busca=Y">Y</a>
       </div>
+
+      <div class="While" style="overflow: scroll;height:60vh">
       {{#each palavras as |palavra|}}
         <div>
           <h2 class="palavra">{{palavra.key}}:</h2>
           <p class="valor">{{palavra.value}}</p>
         </div>
       {{/each}}
+    </div>
     </div>
   </body>
 </html>
