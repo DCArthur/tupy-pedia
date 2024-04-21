@@ -4,32 +4,42 @@ Api NodeJs/Express de dicionário Tupi-guarani
 
 ### ESTRUTURA DE PASTAS
 
-SPRINT-3-PB-AWS-MARCO
-├── docs
-│   └── img
-├── key
-├── public
-│   └── css
-│       └── style.css
-├── src
-│   ├── routes
-│   │   └── rotas.js
-│   ├── Scripts
-│   │   └── GetApiData.js
-│   └── views
-│       ├── layouts
-│       │   └── main.handlebars
-│       ├── categoria.handlebars
-│       ├── displaycat.handlebars
-│       ├── index.handlebars
-│       └── RandomJoke.handlebars
-├── .gitignore
-├── app.js
-├── dockerfile
-├── package-lock.json
-├── packaje.json
-└── README.md
-
+- tupy-pedia/
+  - public/
+    - img/
+      - happy.png
+      - what.png
+      - angry.png
+      - banner.png
+    - styles/
+      - addform.css
+      - removeform.css
+      - styles.css
+    - javascript/
+      - addAux.js
+      - removeAux.js  
+  - src/
+    - bst/
+      - bst.js
+    - controllers/
+      - dicioControllers.js
+    - models/
+      - Node.js
+    - routes/
+      - dicRoutes.js
+  - views/
+    - layouts/
+      - main.hbs
+    - adiciona.hbs
+    - busca.hbs
+    - home.hbs
+    - index.hbs
+    - remove.hbs
+- .gitignore
+- app.js
+- package-lock.json
+- package.json
+- README.md
 
 ### DIAGRAMA DE FUNCIONAMENTO DA ROTAS DA API
 
