@@ -45,7 +45,7 @@ Api NodeJs/Express de dicionário Tupi-guarani
 
 
 
-### DiGRAMAS DE CASOS DE USO 
+### DIAGRAMAS DE CASOS DE USO 
 
 
 ### DIVISÃO DE TASKS POR MEMBRO
