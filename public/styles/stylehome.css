@@ -42,3 +42,16 @@
     border-radius: 3px 4px;
 }
 
+footer .copyright {
+    width: 100%;
+    background-color: #4e2507;
+    height: 68px;
+}
+
+footer .copyright h3 {
+    font-size: 12px;
+    color: #FFF;
+    height: 68px;
+    line-height: 68px;
+}
+
