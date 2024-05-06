@@ -35,8 +35,10 @@ app.listen(port, () => {
     console.log(`Tupypédia rodando em http://localhost:${port}`);
 });
 
-
- 
+//renderização da view de documentação
+app.get('/docs',(req, res)=>{
+  res.render('docs', null)
+});
 //rederizando a da home
   app.get('/', (req, res) => {
     res.render('home', null);
