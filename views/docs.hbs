@@ -1,28 +1,86 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tupypedia - Documentation</title>
-    <link rel="stylesheet" href="/styles/docs.css">
-</head>
+    <link rel="stylesheet" href="/styles/docs.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <div class="all">
-            <aside>
-                <img src="/img/tupylogo.png" alt="" width="100" height="100">
-                <span>Tupypedia v1.0 API Documentation</span>
-            </aside>
-            <content>
-                <h3>DIAGRAMA DE INTERAÇÃO DA API TUPYPEDIA</h3>
-                <img src="/docs/apidiagrama.svg" alt="">
-            </content>
+      <div class="all" style="display: flex;">
+        <aside>
+          <img src="/img/tupylogo.png" alt="" width="100" height="100" />
+          <span>Tupypedia v1.0 <br>
+          API Documentation</span>
+        </aside>
+        <content>
+          <h3 style="text-align: center;margin-top:1em;">O que é a Tupypédia?</h3>
+          <div class="container">
+            <p>A Tupypédia é uma api construida em NodeJs de
+              <strong>Árvore Binária de Busca</strong>(Binary search tree) que
+              organiza palavras de idiomas tupi-guarani em ordem, pré-ordem e
+              pós-ordem. Além de ter também a opção de inserção e remoção de
+              palavras.</p>
+          </div>
 
-        </div>
+          <h3 style="text-align: center;margin-top:1em;">Endpoints</h3>
+          <div class="container">
+            <ul>
+              <li>
+                <strong class="get">GET '/inOrder'</strong>:Rota para exibir o dicionário em ordem. Ao
+                acessar essa rota, o controlador mostrarDicionario é chamado
+                novamente para exibir o dicionário em ordem alfabética.
+              </li>
+              <li>
+                GET '/PreOrder': Rota para exibir o dicionário em pré-ordem. Ao
+                acessar essa rota, o controlador dicionarioPreOrdem do arquivo
+                dicioControllers.js é chamado para exibir o dicionário em
+                pré-ordem.
+              </li>
+              <li>
+                GET '/PosOrdem': Rota para exibir o dicionário em pós-ordem. Ao
+                acessar essa rota, o controlador dicionarioPosOrdem do arquivo
+                dicioControllers.js é chamado para exibir o dicionário em
+                pós-ordem.
+              </li>
+              <li>
+                GET '/buscaLetra': Rota para buscar palavras no dicionário por
+                letra inicial. Ao acessar essa rota, o controlador
+                buscarPorLetra do arquivo dicioControllers.js é chamado para
+                buscar palavras que começam com a letra "A" (ou outra letra
+                passada como parâmetro).
+              </li>
+              <li>
+                GET '/buscaPalavra': Rota para buscar uma palavra específica no
+                dicionário. Ao acessar essa rota, o controlador buscarNoDic do
+                arquivo dicioControllers.js é chamado para buscar a palavra
+                "exemplo" (ou outra palavra passada como parâmetro).
+              </li>
+              <li>
+                DELETE '/remover': Rota para remover uma palavra do dicionário.
+                Ao fazer uma solicitação DELETE para essa rota, o controlador
+                removerDoDicionario do arquivo dicioControllers.js é chamado
+                para remover a palavra passada como parâmetro(por, exemplo:
+                remover?palavra=Açaí).
+              </li>
+              <li>
+                POST '/adicionar': Rota para adicionar uma nova palavra ao
+                dicionário. Ao fazer uma solicitação POST para essa rota (por
+                exemplo, enviando um formulário com os dados da nova palavra), o
+                controlador adicionarAoDicionario do arquivo dicioControllers.js
+                é chamado para adicionar a nova palavra ao dicionário.
+              </li>
+            </ul>
+
+          </div>
+
+        </content>
+
+      </div>
 
     </main>
-</body>
+  </body>
 
 </html>
