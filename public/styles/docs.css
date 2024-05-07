@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color:var(--secondary-color);
+    background-image:url(../img/background1.webp);
 }
 
 aside{
@@ -17,6 +17,10 @@ aside{
 }
 content{
     width:90%;
+   
+}
+h3{
+    color: white;
 }
 li{
     margin-bottom:0.3em;
@@ -34,4 +38,12 @@ li{
 }
 .delete{
     background-color: red;
+}
+
+button{
+    padding: 0.5em;
+    text-transform: uppercase;
+    background-color:#fff;
+    color: var(--secondary-color);
+    border: none;
 }
