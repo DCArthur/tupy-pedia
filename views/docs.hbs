@@ -28,44 +28,44 @@
           <h3 style="text-align: center;margin-top:1em;">Endpoints</h3>
           <div class="container">
             <ul>
-              <li>
+              <li class="get">
                 <strong class="get">GET '/inOrder'</strong>:Rota para exibir o dicionário em ordem. Ao
                 acessar essa rota, o controlador mostrarDicionario é chamado
                 novamente para exibir o dicionário em ordem alfabética.
               </li>
-              <li>
+              <li class="get">
                 GET '/PreOrder': Rota para exibir o dicionário em pré-ordem. Ao
                 acessar essa rota, o controlador dicionarioPreOrdem do arquivo
                 dicioControllers.js é chamado para exibir o dicionário em
                 pré-ordem.
               </li>
-              <li>
+              <li class="get">
                 GET '/PosOrdem': Rota para exibir o dicionário em pós-ordem. Ao
                 acessar essa rota, o controlador dicionarioPosOrdem do arquivo
                 dicioControllers.js é chamado para exibir o dicionário em
                 pós-ordem.
               </li>
-              <li>
+              <li class="get">
                 GET '/buscaLetra': Rota para buscar palavras no dicionário por
                 letra inicial. Ao acessar essa rota, o controlador
                 buscarPorLetra do arquivo dicioControllers.js é chamado para
                 buscar palavras que começam com a letra "A" (ou outra letra
                 passada como parâmetro).
               </li>
-              <li>
+              <li class="get">
                 GET '/buscaPalavra': Rota para buscar uma palavra específica no
                 dicionário. Ao acessar essa rota, o controlador buscarNoDic do
                 arquivo dicioControllers.js é chamado para buscar a palavra
                 "exemplo" (ou outra palavra passada como parâmetro).
               </li>
-              <li>
+              <li class="delete">
                 DELETE '/remover': Rota para remover uma palavra do dicionário.
                 Ao fazer uma solicitação DELETE para essa rota, o controlador
                 removerDoDicionario do arquivo dicioControllers.js é chamado
                 para remover a palavra passada como parâmetro(por, exemplo:
                 remover?palavra=Açaí).
               </li>
-              <li>
+              <li class="post">
                 POST '/adicionar': Rota para adicionar uma nova palavra ao
                 dicionário. Ao fazer uma solicitação POST para essa rota (por
                 exemplo, enviando um formulário com os dados da nova palavra), o
