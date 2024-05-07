@@ -1,13 +1,6 @@
-
+@import url('styles.css');
 .nav-container{
     margin-bottom: 10em;
-}
-
-.sun{
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(11, 2, 30, 0.8);
 }
 
 
@@ -18,6 +11,7 @@
     background-attachment: fixed;
     background-size: cover;
 }
+
 
 .parallax1{
     width:100%;
@@ -38,20 +32,8 @@
 }
 
 .text-about{
-    background-color: rgb(4, 80, 17, 0.4);
+    background-color: rgb(4, 80, 17, 0.7);
     border-radius: 3px 4px;
 }
 
-footer .copyright {
-    width: 100%;
-    background-color: #4e2507;
-    height: 68px;
-}
-
-footer .copyright h3 {
-    font-size: 12px;
-    color: #FFF;
-    height: 68px;
-    line-height: 68px;
-}
 
