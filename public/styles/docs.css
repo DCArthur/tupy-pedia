@@ -8,9 +8,7 @@
 body{
     background-color:var(--secondary-color);
 }
-main{
-    
-}
+
 aside{
     width:10%;
     height:100vh;
@@ -19,4 +17,17 @@ aside{
 }
 content{
     width:90%;
+}
+li{
+    margin-bottom:0.3em;
+    background-color:var(--secondary-color);
+}
+
+.container{
+    background-color:rgb(11, 46, 17);
+    padding:1em;
+    border-radius:4px;
+}
+.get{
+    background-color: var(--secondary-color);
 }
