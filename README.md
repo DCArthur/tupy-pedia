@@ -1,6 +1,5 @@
 # TUPYPÉDIA
-Api NodeJs/Express de dicionário Tupi-guarani
-## ÍNDICE
+Api NodeJs/ExpressJs de dicionário Tupi-guarani.
 
 ### ESTRUTURA DE PASTAS
 
