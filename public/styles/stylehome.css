@@ -52,5 +52,6 @@ button:hover{
     background-color: var(--secondary-color);
     transition: 400ms;
     color: #fff;
+    border: none;
 }
 
