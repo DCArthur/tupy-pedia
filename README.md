@@ -33,6 +33,7 @@ Ou se preferir, poderá acessar o projeto através do link: https://tupy-pedia-1
 <p>Remoção de palavras</p>
 <img src="docs/remove.png">
 </div>
+
 ### AUTORES:
 Adelson Teodoro;
 Arthur Duarte;
