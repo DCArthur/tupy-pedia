@@ -32,8 +32,25 @@
 }
 
 .text-about{
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(4, 80, 17, 0.7);
     border-radius: 3px 4px;
 }
 
+button{
+    background-color:#fff;
+    text-transform: uppercase;
+    color:var(--secondary-color);
+    padding:20px;
+    border: solid 2px var green;
+    border-radius: 3px;
+}
+button:hover{
+    background-color: var(--secondary-color);
+    transition: 400ms;
+    color: #fff;
+}
 
