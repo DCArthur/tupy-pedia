@@ -16,9 +16,9 @@ Ou se preferir, poderá acessar o projeto através do link: https://tupy-pedia-1
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"  width="60" height="60"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg" width="60" height="60"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/handlebars/handlebars-original-wordmark.svg"  width="60" height="60"/>
-
 </div>
-### DIAGRAMA DE FUNCIONAMENTO DA ROTAS DA API
+
+###  DIAGRAMA DE FUNCIONAMENTO DA ROTAS DA API
 <img src="docs/diagrama.svg" />
 
 ### LAYOUT
