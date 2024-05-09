@@ -6,7 +6,8 @@ Api NodeJs/ExpressJs de dicionário Tupi-guarani.
 - Verifique se seu computador tem uma versão igual ao superior a versão 18 do NodeJs;
 - Clone este respositório;
 - Abra o a pasta raiz do repositório;
-- Execute o comando `npm install` para instalar as depêndencias do projeto;
+- Execute o comando `npm install` para instalar as dependências do projeto;
+- Insira o comando `npm run dev` para rodar o projeto;
 - Abra o projeto na url que aparecerá no terminal.
 
 Ou se preferir, poderá acessar o projeto através do link: https://tupy-pedia-1.onrender.com/
@@ -16,7 +17,7 @@ Ou se preferir, poderá acessar o projeto através do link: https://tupy-pedia-1
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg" width="60" height="60"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/handlebars/handlebars-original-wordmark.svg"  width="60" height="60"/>
 
-
+</div>
 ### DIAGRAMA DE FUNCIONAMENTO DA ROTAS DA API
 <img src="docs/diagrama.svg" />
 
