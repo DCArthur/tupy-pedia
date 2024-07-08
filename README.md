@@ -36,8 +36,9 @@ Ou se preferir, poderá acessar o projeto através do link: https://tupy-pedia-1
 </div>
 
 ### AUTORES:
-Adelson Teodoro;
-Arthur Duarte;
-Savio Vitor;
-Victor Ferraz.
+
+![Adelson Teodoro](https://github.com/imrooteodoro)
+![Arthur Duarte](https://github.com/imrooteodoro)
+![Savio Vitor Alves](https://github.com/SavioVitorAlves)
+![Victor Ferraz](https://github.com/victorferrazms)
 
